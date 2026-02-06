@@ -2,16 +2,17 @@
 
 
 def calcular_IMC(peso, altura):
-    pass
-peso = float(input("Ingresa tu peso en kg: "))
-altura = float(input("Ingresa tu altura en metros (ejemplo: 1.75): "))
+    peso = float(input("Ingresa tu peso en kg: "))
+    altura = float(input("Ingresa tu altura en metros (ejemplo: 1.75): "))
 
-imc = peso / (altura ** 2)
+    imc = peso / (altura ** 2)
 
-print(f"Tu IMC es: {round(imc, 2)}")
+    print(f"Tu IMC es: {round(imc, 2)}")
 
 def calcular_porcentaje_grasa(peso, altura, edad, valor_genero):
-    pass
+    imc = peso / (altura ** 2)
+    gc = (1.2 * imc) + (0.23 * edad) - 5.4 - valor_genero
+    return gc
 
 def calcular_calorias_en_reposo(peso, altura, edad, valor_genero):
     pass
@@ -69,3 +70,4 @@ elif opcion == "5":
 
 else:
     print("Opción no válida. Por favor, reinicia el programa.")
+
